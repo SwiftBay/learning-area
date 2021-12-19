@@ -26,13 +26,24 @@
 
   </body>
   <script>
-    let machineActive = true;
+    let machineActive = false;
     let pwd = 'cheese';
 
     let machineResult;
     let pwdResult;
 
     // Add your code here
+
+    if (machineActive) {
+      machineResult = "The machine is on. Kindly proceed."
+      if (pwd === 'cheese') {
+        pwdResult = 'You have successfully signed in.'
+      } else {
+        pwdResult = 'Wrong password, You have one more trial.'
+      }
+    } else {
+      machineResult = 'The machine is currently powered off. Kindly put it on.'
+    }
 
     // Don't edit the code below here!
 
@@ -43,6 +54,8 @@
 
     para1.textContent = machineResult;
     para2.textContent = pwdResult;
+
+    console.log(pwd);
 
     section.appendChild(para1);
     section.appendChild(para2);
