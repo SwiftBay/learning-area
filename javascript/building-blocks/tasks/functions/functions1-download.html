@@ -30,7 +30,12 @@
     const para = document.createElement('p');
 
     // Add your code here
+    function chooseName(arr) {
+      para.textContent = arr[Math.floor(Math.random() * arr.length)];
+      return para;
+    }
 
+    chooseName(names);
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
